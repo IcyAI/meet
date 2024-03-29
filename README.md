@@ -11,6 +11,9 @@ Key Features:
 ● Add an App Shortcut to the Home Screen.
 ● Display Charts Visualizing Event Details.
 
+Cloud Hosting/Serverless Functions
+This project will use Google OAuth as an Authorization server. The project will also utilize AWS Lambda as the serverless Function provider.
+AWS Lambda will retrieve information from Google's protected API Calendar and return it to the React App. 
 
 Stories
 
