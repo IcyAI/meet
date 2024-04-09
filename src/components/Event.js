@@ -16,19 +16,17 @@ const Event = ({ event }) => {
 
   return (
     <li className="event">
-    <h4>{event.summary}</h4>
-    <p>{event.created}</p>
+     <h2>{event.summary}</h2>
     <p>{event.location}</p>
-    <button className="details-button"
+    <p>{event.created}</p>
+      {showDetails ?
+        <p className="details">{event.description}</p>
+        : null
+      }
+      <button className="details-btn"
       onClick={() => setShowDetails(!showDetails)}>
       {showDetails ? 'Hide Details' : 'Show Details'}
     </button>
-    {showDetails ? (
-      <div className="details">
-        <h3>Event Details</h3>
-        <p>{event.description}</p>
-      </div>
-    ) : null}
   </li>
   );
 }
