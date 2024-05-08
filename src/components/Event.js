@@ -1,13 +1,5 @@
 // src/components/Event.js
 
-// const Event = () => {
-//     return (
-//       <li></li>
-//     );
-//   }
-  
-//   export default Event;
-
 import { useState } from "react";
 
 const Event = ({ event }) => {

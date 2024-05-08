@@ -29,12 +29,6 @@ const App = () => {
     fetchData();
   }, [currentCity, currentNOE]);
 
-  // const fetchData = async () => {
-  //   const allEvents = await getEvents();
-  //   setEvents(allEvents.slice(0, currentNOE));
-  //   setAllLocations(extractLocations(allEvents));
-  // }
-
   const fetchData = async () => {
     const allEvents = await getEvents();
     const filteredEvents = currentCity === "See all cities" ?
@@ -43,22 +37,6 @@ const App = () => {
     setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
   }
-
-  // return (
-  //   <div className="App">
-  //     <div className="alerts-container">
-  //       {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
-  //       {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
-  //       {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
-  //     </div>
-  //     <CitySearch
-  //       allLocations={allLocations}
-  //       setCurrentCity={setCurrentCity} 
-  //       setInfoAlert={setInfoAlert} />
-  //     <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert}/>
-  //     <EventList events={events} />
-  //   </div>
-  // );
 
   return (
     <div className="App">
